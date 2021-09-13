@@ -14,8 +14,8 @@ namespace Shapes
         {
             Console.WriteLine("Initializing a new Square instance. What side length does the square have?");
             this.LengthOfSide = int.Parse(Console.ReadLine());
-            Console.WriteLine("The area of this square is: {0}.", PerimAreaCalc.CalculateArea(shapeSelected, LengthOfSide));
-            Console.WriteLine("The perimeter of this square is: {0}.", PerimAreaCalc.CalculatePerimeter(shapeSelected, LengthOfSide));
+            Console.WriteLine("The area of this square is: {0}.", Calcs.CalculateArea(shapeSelected, LengthOfSide));
+            Console.WriteLine("The perimeter of this square is: {0}.", Calcs.CalculatePerimeter(shapeSelected, LengthOfSide));
         }
 
         ~Square()

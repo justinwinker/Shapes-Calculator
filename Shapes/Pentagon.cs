@@ -14,8 +14,8 @@ namespace Shapes
         {
             Console.WriteLine("Initializing a new Pentagon instance. What side length do you wish to use?");
             this.LengthOfSide = int.Parse(Console.ReadLine());
-            Console.WriteLine("The area of this pentagon is: {0}.", PerimAreaCalc.CalculateArea(shapeSelected, this.LengthOfSide));
-            Console.WriteLine("The perimeter of this pentagon is: {0}.", PerimAreaCalc.CalculatePerimeter(shapeSelected, this.LengthOfSide));
+            Console.WriteLine("The area of this pentagon is: {0}.", Calcs.CalculateArea(shapeSelected, this.LengthOfSide));
+            Console.WriteLine("The perimeter of this pentagon is: {0}.", Calcs.CalculatePerimeter(shapeSelected, this.LengthOfSide));
         }
 
         ~Pentagon()

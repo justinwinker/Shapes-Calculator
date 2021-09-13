@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    class PerimAreaCalc
+    class Calcs
     {
         private double area;
         private double perimeter;

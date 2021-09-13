@@ -14,8 +14,8 @@ namespace Shapes
         {
             Console.WriteLine("Initializing a new Circle instance. What radius do you wish to use?");
             this.radius = int.Parse(Console.ReadLine());
-            Console.WriteLine("The area of this circle is: {0}.", PerimAreaCalc.CalculateArea(shapeSelected, this.radius));
-            Console.WriteLine("The perimeter of this circle is: {0}.", PerimAreaCalc.CalculatePerimeter(shapeSelected, this.radius)); 
+            Console.WriteLine("The area of this circle is: {0}.", Calcs.CalculateArea(shapeSelected, this.radius));
+            Console.WriteLine("The perimeter of this circle is: {0}.", Calcs.CalculatePerimeter(shapeSelected, this.radius)); 
         }
 
         ~Circle()

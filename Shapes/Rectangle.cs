@@ -17,8 +17,8 @@ namespace Shapes
             this.sideA = int.Parse(Console.ReadLine());
             Console.WriteLine("Initializing a new Rectangle instance. What is the second side length?");
             this.sideB = int.Parse(Console.ReadLine());
-            Console.WriteLine("The area of this rectangle is: {0}.", PerimAreaCalc.CalculateArea(shapeSelected, this.sideA, this.sideB));
-            Console.WriteLine("The perimeter of this rectangle is: {0}.", PerimAreaCalc.CalculatePerimeter(shapeSelected, this.sideA, this.sideB));
+            Console.WriteLine("The area of this rectangle is: {0}.", Calcs.CalculateArea(shapeSelected, this.sideA, this.sideB));
+            Console.WriteLine("The perimeter of this rectangle is: {0}.", Calcs.CalculatePerimeter(shapeSelected, this.sideA, this.sideB));
         }
 
         ~Rectangle()
