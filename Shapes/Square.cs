@@ -16,6 +16,12 @@ namespace Shapes
             this.LengthOfSide = double.Parse(Console.ReadLine());
         }
 
+        public Square(double a)
+        {
+            Console.WriteLine("Initializing a new Square instance with side lengths of {0}.", a);
+            LengthOfSide = a;
+        }
+
         public double CalculateArea()
         {
             double area = LengthOfSide * LengthOfSide;

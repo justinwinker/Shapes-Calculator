@@ -17,6 +17,12 @@ namespace Shapes
 
         }
 
+        public Pentagon(double a)
+        {
+            Console.WriteLine("Initializing a new Pentagon instance with side lengths of {0}.", a);
+            LengthOfSide = a;
+        }
+
         public double CalculateArea()
         {
             double area = (.25 * Math.Sqrt(5*(5+2*Math.Sqrt(5)))* LengthOfSide * LengthOfSide);

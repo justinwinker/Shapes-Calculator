@@ -19,6 +19,13 @@ namespace Shapes
             this.sideB = double.Parse(Console.ReadLine());
         }
 
+        public Rectangle(double a, double b)
+        {
+            Console.WriteLine("Initializing a new Rectangle instance with side lengths of {0} and {1}.", a, b);
+            sideA = a;
+            sideB = b;
+        }
+
         public double CalculateArea()
         {
             double area = this.sideA * this.sideB;

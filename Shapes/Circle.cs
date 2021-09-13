@@ -16,6 +16,12 @@ namespace Shapes
             this.radius = double.Parse(Console.ReadLine());
         }
 
+        public Circle(double a)
+        {
+            Console.WriteLine("Initializing a new Circle instance with radius of {0}.", a);
+            radius = a;
+        }
+
         public double CalculateArea()
         {
             double area = Math.PI * this.radius * this.radius;

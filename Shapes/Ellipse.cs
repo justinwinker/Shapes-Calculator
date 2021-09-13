@@ -19,6 +19,13 @@ namespace Shapes
             this.radiusB = double.Parse(Console.ReadLine());
         }
 
+        public Ellipse(double a, double b)
+        {
+            Console.WriteLine("Initializing a new Ellipse instance with radii of {0} and {1}.", a, b);
+            radiusA = a;
+            radiusB = b;
+        }
+
         public double CalculateArea()
         {
             double area = Math.PI * this.radiusA * this.radiusB;
