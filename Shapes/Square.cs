@@ -12,27 +12,15 @@ namespace Shapes
 
         public Square(int shapeSelected)
         {
-            Console.WriteLine("Initializing a new Square instance. What radius do you wish to use?");
+            Console.WriteLine("Initializing a new Square instance. What side length does the square have?");
             this.LengthOfSide = int.Parse(Console.ReadLine());
-            Console.WriteLine("The area of this circle is: {0}.", PerimAreaCalc.CalculateArea(shapeSelected, LengthOfSide));
-            Console.WriteLine("The perimetere of this circle is: {0}.", PerimAreaCalc.CalculatePerimeter(shapeSelected, LengthOfSide));
-        }
-        /*
-        public Double CalculateArea(double LengthOfSide)
-        {
-            double area = (this.LengthOfSide * this.LengthOfSide);
-            return area;
+            Console.WriteLine("The area of this square is: {0}.", PerimAreaCalc.CalculateArea(shapeSelected, LengthOfSide));
+            Console.WriteLine("The perimeter of this square is: {0}.", PerimAreaCalc.CalculatePerimeter(shapeSelected, LengthOfSide));
         }
 
-        public Double CalculatePerimeter(double LengthOfSide)
-        {
-            double perimeter = (this.LengthOfSide * 4);
-            return perimeter;
-        }
-        */
         ~Square()
         {
-            Console.WriteLine("Destroying the circle with side lengths of {0}.", this.LengthOfSide);
+            Console.WriteLine("Destroying the square with side lengths of {0}.", this.LengthOfSide);
         }
     }
 }
