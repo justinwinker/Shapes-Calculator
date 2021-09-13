@@ -8,19 +8,29 @@ namespace Shapes
 {
     class Square
     {
-        private double LengthOfSide;
+        private readonly double LengthOfSide;
 
-        public Square(int shapeSelected)
+        public Square()
         {
             Console.WriteLine("Initializing a new Square instance. What side length does the square have?");
-            this.LengthOfSide = int.Parse(Console.ReadLine());
-            Console.WriteLine("The area of this square is: {0}.", Calcs.CalculateArea(shapeSelected, LengthOfSide));
-            Console.WriteLine("The perimeter of this square is: {0}.", Calcs.CalculatePerimeter(shapeSelected, LengthOfSide));
+            this.LengthOfSide = double.Parse(Console.ReadLine());
+        }
+
+        public double CalculateArea()
+        {
+            double area = LengthOfSide * LengthOfSide;
+            return area;
+        }
+
+        public double CalculatePerimeter()
+        {
+            double perimeter = LengthOfSide * 4;
+            return perimeter;
         }
 
         ~Square()
         {
-            Console.WriteLine("Destroying the square with side lengths of {0}.", this.LengthOfSide);
+            Console.WriteLine("Destroying the square with side lengths of {0}.", LengthOfSide);
         }
     }
 }

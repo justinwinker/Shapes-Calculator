@@ -8,17 +8,27 @@ namespace Shapes
 {
     class Rectangle
     {
-        private double sideA;
-        private double sideB;
+        private readonly double sideA;
+        private readonly double sideB;
 
-        public Rectangle(int shapeSelected)
+        public Rectangle()
         {
             Console.WriteLine("Initializing a new Rectangle instance. What is the first side length?");
-            this.sideA = int.Parse(Console.ReadLine());
-            Console.WriteLine("Initializing a new Rectangle instance. What is the second side length?");
-            this.sideB = int.Parse(Console.ReadLine());
-            Console.WriteLine("The area of this rectangle is: {0}.", Calcs.CalculateArea(shapeSelected, this.sideA, this.sideB));
-            Console.WriteLine("The perimeter of this rectangle is: {0}.", Calcs.CalculatePerimeter(shapeSelected, this.sideA, this.sideB));
+            this.sideA = double.Parse(Console.ReadLine());
+            Console.WriteLine("What is the second side length?");
+            this.sideB = double.Parse(Console.ReadLine());
+        }
+
+        public double CalculateArea()
+        {
+            double area = this.sideA * this.sideB;
+            return area;
+        }
+
+        public double CalculatePerimeter()
+        {
+            double perimeter = (this.sideA * 2) + (this.sideB * 2);
+            return perimeter;
         }
 
         ~Rectangle()

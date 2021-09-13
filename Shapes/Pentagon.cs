@@ -8,16 +8,26 @@ namespace Shapes
 {
     class Pentagon
     {
-        private double LengthOfSide;
+        private readonly double LengthOfSide;
 
-        public Pentagon(int shapeSelected)
+        public Pentagon()
         {
             Console.WriteLine("Initializing a new Pentagon instance. What side length do you wish to use?");
-            this.LengthOfSide = int.Parse(Console.ReadLine());
-            Console.WriteLine("The area of this pentagon is: {0}.", Calcs.CalculateArea(shapeSelected, this.LengthOfSide));
-            Console.WriteLine("The perimeter of this pentagon is: {0}.", Calcs.CalculatePerimeter(shapeSelected, this.LengthOfSide));
+            this.LengthOfSide = double.Parse(Console.ReadLine());
+
         }
 
+        public double CalculateArea()
+        {
+            double area = (.25 * Math.Sqrt(5*(5+2*Math.Sqrt(5)))* LengthOfSide * LengthOfSide);
+            return area;
+        }
+
+        public double CalculatePerimeter()
+        {
+            double perimeter = LengthOfSide * 5;
+            return perimeter;
+        }
         ~Pentagon()
         {
             Console.WriteLine("Destroying the pentagon with side length of {0}.", this.LengthOfSide);
